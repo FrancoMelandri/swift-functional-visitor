@@ -1,11 +1,9 @@
 
  final class Basic {
      func render(_ facets: [FacetProtocol]) -> String {
-         var result = ""
-         for facet in facets {
-             result += renderFacet(facet)
-         }
-         return result
+         return facets
+                    .map { renderFacet($0) }
+                    .reduce("", +)
      }
 
      func renderFacet(_ facet: FacetProtocol) -> String {
