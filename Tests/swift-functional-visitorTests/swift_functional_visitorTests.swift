@@ -29,6 +29,16 @@ final class swift_functional_visitorTests: XCTestCase {
         XCTAssertEqual(result, "CATEGORY")
     }
 
+    func testBasicAll() {
+        let facets: [FacetProtocol] = [
+            Brand(name: "BRAND"),
+            Size(title: "SIZE"),
+            Category(identifier: "CATEGORY")
+        ]
+        let result = sut.render(facets)
+        XCTAssertEqual(result, "BRANDSIZECATEGORY")
+    }
+
     static var allTests = [
         ("testBasicBrand", testBasicBrand),
     ]
