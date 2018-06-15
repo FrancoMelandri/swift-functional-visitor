@@ -1,7 +1,7 @@
 import XCTest
 @testable import swift_functional_visitor
 
-final class swift_functional_visitorTests: XCTestCase {
+final class basic_Tests: XCTestCase {
 
     let sut = Basic()
 
